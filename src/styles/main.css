@@ -43,6 +43,9 @@ table {
 *, *:before, *:after {
   box-sizing: border-box; }
 
+body {
+  background: url("../../images/brilliant.png"); }
+
 /***** Site Components ******/
 header {
   background: #191716;
