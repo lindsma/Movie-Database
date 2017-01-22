@@ -45,12 +45,41 @@ table {
 
 /***** Site Components ******/
 header {
-  height: 40%;
-  background: #191716; }
+  background: #191716;
+  display: flex;
+  flex-wrap: wrap;
+  height: 40%; }
   header .site-name {
     font-family: "Righteous", cursive;
     color: #F1D302;
     font-size: 40px;
     padding: 20px; }
+  header .search {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    header .search .fa-search {
+      color: white;
+      font-size: 80px;
+      line-height: 100px; }
+    header .search input {
+      background: #191716;
+      border: none;
+      color: #F6F7EB;
+      font-family: "Open Sans", sans-serif;
+      font-size: 80px;
+      font-weight: bold;
+      height: 100px;
+      outline: none;
+      text-align: center;
+      width: 50%; }
+      header .search input::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.5); }
+      header .search input::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.5); }
+      header .search input:-moz-placeholder {
+        color: rgba(255, 255, 255, 0.5); }
+      header .search input:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.5); }
 
 /*# sourceMappingURL=main.css.map */

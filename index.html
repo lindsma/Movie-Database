@@ -4,10 +4,11 @@
 <head>
     <meta charset='UTF-8'>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title></title>
+    <title>cinemaDb</title>
     <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
     <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Londrina+Shadow|Monoton|Quicksand:300,400,700|Raleway+Dots|Righteous" rel="stylesheet">
+    <script src="https://use.fontawesome.com/6b4891366d.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Londrina+Shadow|Monoton|Raleway+Dots|Righteous" rel="stylesheet">
     <!-- <link rel="stylesheet" href="lib/styles/main.min.css"> -->
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
@@ -15,6 +16,12 @@
 <body ng-app='movieApp'>
     <header>
       <h1 class='site-name'>cinemaDb</h1>
+      <div class='search'>
+        <!-- <label for='searchbar'>search</label> -->
+
+        <input class='searchbar' type='text' placeholder='search by title'>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
     </header>
     <main>
       <ui-view></ui-view>
