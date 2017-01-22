@@ -44,5 +44,13 @@ table {
   box-sizing: border-box; }
 
 /***** Site Components ******/
+header {
+  height: 40%;
+  background: #191716; }
+  header .site-name {
+    font-family: "Righteous", cursive;
+    color: #F1D302;
+    font-size: 40px;
+    padding: 20px; }
 
 /*# sourceMappingURL=main.css.map */
