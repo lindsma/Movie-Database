@@ -64,6 +64,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: all 1s ease;
   width: 100%; }
   .search.home {
     position: fixed;
@@ -88,6 +89,7 @@ header {
       font-size: 80px;
       line-height: 100px; }
   .search.results {
+    padding: 20px 0;
     position: relative; }
     .search.results .search-header {
       font-size: 30px;
