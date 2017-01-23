@@ -1,7 +1,7 @@
 (function($) {
   "use strict";
 
-  const app = angular.module('movieApp', ['ui.router']);
+  const app = angular.module('movieApp', ['ui.router', 'LocalStorageModule']);
 
   app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
