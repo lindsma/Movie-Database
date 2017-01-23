@@ -7,11 +7,57 @@
     &.home {
         position: fixed;
         top: 30vh;
+
+        .search-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        input {
+            height: 100px;
+            font-size: 80px;
+            text-align: center;
+            width: 60%;
+            @include placeholder {
+                color: rgba(255, 255, 255, .5);
+            }
+        }
+
+        .fa-search {
+            font-size: 80px;
+            line-height: 100px;
+        }
     }
 
     &.results {
-        position: fixed;
-        top: 10vh;
+        position: relative;
+
+        .search-header {
+            font-size: 30px;
+            margin-bottom: 0;
+            line-height: 60px;
+        }
+
+        form {
+            margin-left: 20px;
+
+            input {
+                background: $ecruWhite;
+                color: $codGray;
+                height: 60px;
+                font-size: 40px;
+                text-align: center;
+                @include placeholder {
+                    color: rgba(25, 23, 22, .5);
+                }
+            }
+        }
+
+        .fa-search {
+            font-size: 60px;
+            line-height: 60px;
+            margin-left: 15px;
+        }
     }
 
     .search-header {
@@ -19,19 +65,14 @@
         font-family: $openSans;
         font-size: 40px;
         font-weight: bold;
-        margin-bottom: 30px;
-        text-align: center;
-        width: 100%;
     }
 
     form {
-      display: flex;
-      justify-content: center;
+        display: flex;
+        justify-content: center;
 
         .fa-search {
-            color: white;
-            font-size: 80px;
-            line-height: 100px;
+            color: $ecruWhite;
 
             &:hover {
                 color: $gold;
@@ -39,8 +80,8 @@
         }
 
         .search-btn {
-          background: $codGray;
-          border: none;
+            background: $codGray;
+            border: none;
         }
 
         input {
@@ -48,15 +89,8 @@
             border: none;
             color: $ecruWhite;
             font-family: $openSans;
-            font-size: 80px;
             font-weight: bold;
-            height: 100px;
             outline: none;
-            text-align: center;
-            width: 60%;
-            @include placeholder {
-                color: rgba(255, 255, 255, .5);
-            }
         }
     }
 }
