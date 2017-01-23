@@ -5,44 +5,53 @@
     width: 100%;
 
     &.home {
-      position: fixed;
-      top: 30vh;
-    }
-
-    .fa-search {
-      color: white;
-      font-size: 80px;
-      line-height: 100px;
-
-      &:hover {
-        color: $gold;
-      }
+        position: fixed;
+        top: 30vh;
     }
 
     .search-header {
-      color: $gold;
-      font-family: $openSans;
-      font-size: 40px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      text-align: center;
-      width: 100%;
+        color: $gold;
+        font-family: $openSans;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
     }
 
-    input {
-        background: $codGray;
-        border: none;
-        color: $ecruWhite;
-        font-family: $openSans;
-        font-size: 80px;
-        font-weight: bold;
-        height: 100px;
-        outline: none;
-        text-align: center;
-        width: 50%;
+    form {
+      display: flex;
+      justify-content: center;
 
-        @include placeholder {
-          color: rgba(255, 255, 255, .5);
+        .fa-search {
+            color: white;
+            font-size: 80px;
+            line-height: 100px;
+
+            &:hover {
+                color: $gold;
+            }
+        }
+
+        .search-btn {
+          background: $codGray;
+          border: none;
+        }
+
+        input {
+            background: $codGray;
+            border: none;
+            color: $ecruWhite;
+            font-family: $openSans;
+            font-size: 80px;
+            font-weight: bold;
+            height: 100px;
+            outline: none;
+            text-align: center;
+            width: 60%;
+            @include placeholder {
+                color: rgba(255, 255, 255, .5);
+            }
         }
     }
 }

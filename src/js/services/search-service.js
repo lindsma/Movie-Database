@@ -11,5 +11,7 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
         });
     }
 
-    // searchMovies('nemo');
+    return {
+      searchMovies: searchMovies
+    };
 });

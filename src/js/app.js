@@ -6,14 +6,18 @@
   app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
-    $stateProvider.state('codeKarmaParent', {
+    $stateProvider.state('movieAppParent', {
           url: '/',
           abstract: true,
           template: '<ui-view></ui-view>'
-      }).state('codeKarmaParent.home', {
+      }).state('movieAppParent.home', {
           url: '',
           controller: 'HomeController as home',
           templateUrl: 'src/templates/home.html'
+      }).state('movieAppParent.results', {
+          url:'search-results',
+          controller: 'ResultsController as results',
+          templateUrl: 'src/templates/results.html'
       });
   });
 
