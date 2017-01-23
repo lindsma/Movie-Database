@@ -9,6 +9,11 @@
         top: 30vh;
     }
 
+    &.results {
+        position: fixed;
+        top: 10vh;
+    }
+
     .search-header {
         color: $gold;
         font-family: $openSans;

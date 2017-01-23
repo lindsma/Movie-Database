@@ -4,9 +4,13 @@ header {
     flex-wrap: wrap;
 
     .site-name {
-        font-family: $righteous;
-        color: $gold;
-        font-size: 40px;
         padding: 30px 40px;
+
+        a {
+          color: $gold;
+          font-family: $righteous;
+          font-size: 40px;
+          text-decoration: none;
+        }
     }
 }

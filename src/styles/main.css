@@ -53,10 +53,12 @@ header {
   display: flex;
   flex-wrap: wrap; }
   header .site-name {
-    font-family: "Righteous", cursive;
-    color: #F1D302;
-    font-size: 40px;
     padding: 30px 40px; }
+    header .site-name a {
+      color: #F1D302;
+      font-family: "Righteous", cursive;
+      font-size: 40px;
+      text-decoration: none; }
 
 .search {
   display: flex;
@@ -66,6 +68,9 @@ header {
   .search.home {
     position: fixed;
     top: 30vh; }
+  .search.results {
+    position: fixed;
+    top: 10vh; }
   .search .search-header {
     color: #F1D302;
     font-family: "Open Sans", sans-serif;
