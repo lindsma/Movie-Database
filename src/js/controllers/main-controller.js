@@ -9,7 +9,6 @@ angular.module('movieApp').controller('MainController', function($state, $scope,
   }
 
   this.revertStyles = function() {
-    console.log('hello');
     $('div.search').removeClass('results').addClass('home');
   }
 });
