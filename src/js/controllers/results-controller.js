@@ -6,5 +6,11 @@ this.populateResults = function() {
   $scope.searchTerms = SearchService.getSearchTerms();
 }
 
+this.setWatchlist = function(watchObj) {
+  let currentList = SearchService.getWatchlist();
+  currentList.push(watchObj);
+  SearchService.setWatchlist(currentList);
+}
+
 this.populateResults();
 });

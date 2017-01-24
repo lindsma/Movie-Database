@@ -25,11 +25,21 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
         return localStorageService.get('searchTerms') || false;
     }
 
+    function getWatchlist() {
+        return localStorageService.get('watchlist') || [];
+    }
+
+    function setWatchlist(newList) {
+        localStorageService.set('watchlist', newList);
+    }
+
     return {
       searchMovies: searchMovies,
       setSearchResults: setSearchResults,
       getSearchResults: getSearchResults,
       setSearchTerms: setSearchTerms,
-      getSearchTerms: getSearchTerms
+      getSearchTerms: getSearchTerms,
+      setWatchlist: setWatchlist,
+      getWatchlist: getWatchlist
     };
 });
