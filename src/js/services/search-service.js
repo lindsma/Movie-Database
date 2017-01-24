@@ -2,7 +2,7 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
     function searchMovies(searchTerms, callback) {
         $http({
             method: 'GET',
-            url: "http://www.omdbapi.com/?s=" + searchTerms
+            url: "http://www.omdbapi.com/?s=" + searchTerms + "&type=movie"
         }).then(callback, function errorCallback(response) {
             console.log(response);
         });
