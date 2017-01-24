@@ -8,9 +8,11 @@
 .result {
   background: $ecruWhite;
   display: flex;
+  font-size: 16px;
+  justify-content: space-between;
   margin: 20px;
   transition: all .7s ease;
-  width: 350px;
+  width: 370px;
 
   .movie-details {
     display: flex;
@@ -33,10 +35,16 @@
     }
 
     .watchlist {
+      color: $cinnabar;
       font-size: 16px;
 
       .fa-plus {
+        color: $codGray;
         margin-left: $hspace;
+
+        &:hover {
+          color: $cinnabar;
+        }
       }
     }
   }

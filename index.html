@@ -16,6 +16,9 @@
 <body ng-app='movieApp' ng-controller='MainController as main'>
     <header>
       <h1 class='site-name'><a ng-click='main.revertStyles()' ui-sref='movieAppParent.home'>cinemaDb</a></h1>
+      <nav>
+        <a class='watchlist-nav' ui-sref='movieAppParent.watchlist'>my watchlist</a>
+      </nav>
     </header>
     <div class='search home'>
         <p class='search-header'>find a movie</p>

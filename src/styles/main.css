@@ -51,14 +51,28 @@ body {
 header {
   background: #191716;
   display: flex;
-  flex-wrap: wrap; }
+  height: 100px;
+  justify-content: space-between; }
   header .site-name {
-    padding: 30px 40px; }
+    padding: 0 40px; }
     header .site-name a {
       color: #F1D302;
       font-family: "Righteous", cursive;
       font-size: 40px;
+      line-height: 100px;
       text-decoration: none; }
+  header .watchlist-nav {
+    color: #F6F7EB;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 100px;
+    padding: 0 40px;
+    text-decoration: none; }
+    header .watchlist-nav:hover {
+      color: #F1D302;
+      cursor: pointer; }
 
 .search {
   display: flex;
@@ -126,7 +140,7 @@ header {
     .search form .fa-search {
       color: #F6F7EB; }
       .search form .fa-search:hover {
-        color: #F1D302; }
+        color: #BF211E; }
     .search form .search-btn {
       background: #191716;
       border: none; }
@@ -147,9 +161,11 @@ header {
 .result {
   background: #F6F7EB;
   display: flex;
+  font-size: 16px;
+  justify-content: space-between;
   margin: 20px;
   transition: all .7s ease;
-  width: 350px; }
+  width: 370px; }
   .result .movie-details {
     display: flex;
     flex-direction: column;
@@ -164,9 +180,13 @@ header {
     .result .movie-details .more-info {
       color: #191716; }
     .result .movie-details .watchlist {
+      color: #BF211E;
       font-size: 16px; }
       .result .movie-details .watchlist .fa-plus {
+        color: #191716;
         margin-left: 10px; }
+        .result .movie-details .watchlist .fa-plus:hover {
+          color: #BF211E; }
 
 .search-terms {
   color: #F6F7EB;
