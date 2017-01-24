@@ -1,0 +1,60 @@
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: all .7s ease;
+}
+
+.result {
+  background: $ecruWhite;
+  display: flex;
+  margin: 20px;
+  transition: all .7s ease;
+  width: 350px;
+
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: $vspace $hspace;
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    .more-info {
+      color: $codGray;
+    }
+
+    .watchlist {
+      font-size: 16px;
+
+      .fa-plus {
+        margin-left: $hspace;
+      }
+    }
+  }
+}
+
+.search-terms {
+  color: $ecruWhite;
+  font-family: $openSans;
+  font-size: 20px;
+  text-align: center;
+
+  span {
+    color: $gold;
+    font-weight: 700;
+  }
+}
+
+.poster {
+  height: 200px;
+  margin: $vspace;
+}

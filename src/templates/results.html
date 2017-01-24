@@ -1,9 +1,11 @@
-<p ng-show='searchTerms'>search results for <span>'{{searchTerms}}'</span></p>
+<p ng-show='searchTerms' class='search-terms'>search results for <span>{{searchTerms}}</span></p>
 <div class='results-container'>
-  <div class='result' ng-repeat='result in searchResults'>
-    <img ng-src='{{result.Poster}}' alt='{{result.Title}} movie poster'>
-    <h3>{{result.Title}}</h3>
-    <p>{{result.Year}}</p>
-    <a ng-href='http://www.imdb.com/title/{{result.imdbID}}'>More Info</a>
-  </div>
+    <div class='result' ng-repeat='result in searchResults'>
+        <img ng-src='{{result.Poster}}' class='poster' alt='{{result.Title}} movie poster'>
+        <div class='movie-details'>
+            <h3 class='title'>{{result.Title}} <span>({{result.Year}})</span></h3>
+            <a ng-href='http://www.imdb.com/title/{{result.imdbID}}' class='more-info'>More Info</a>
+            <p class='watchlist'>add to watchlist<i class="fa fa-plus" aria-hidden="true"></i></p>
+        </div>
+    </div>
 </div>
