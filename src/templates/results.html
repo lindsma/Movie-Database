@@ -1,5 +1,9 @@
+<p ng-show='searchTerms'>search results for <span>'{{searchTerms}}'</span></p>
 <div class='results-container'>
-  <div class='result' ng-repeat='result in results.searchResults'>
-    <p>{{result.Title}}</p>
+  <div class='result' ng-repeat='result in searchResults'>
+    <img ng-src='{{result.Poster}}' alt='{{result.Title}} movie poster'>
+    <h3>{{result.Title}}</h3>
+    <p>{{result.Year}}</p>
+    <a ng-href='http://www.imdb.com/title/{{result.imdbID}}'>More Info</a>
   </div>
 </div>
