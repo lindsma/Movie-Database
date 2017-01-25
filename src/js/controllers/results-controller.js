@@ -13,6 +13,7 @@ this.setWatchlist = function(watchObj) {
 }
 
 this.getDetails = function(movieID) {
+  $('body').addClass('.modal-open');
   SearchService.findByID(movieID, function(response) {
     $scope.movieDetail = response.data;
     $scope.modalOpen = true;

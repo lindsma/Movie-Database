@@ -1,26 +1,28 @@
 <p ng-show='searchTerms' class='search-terms'>search results for <span>{{searchTerms}}</span></p>
 <div class='results-container'>
-    <div class='result' ng-repeat='result in searchResults'>
-        <img ng-click='results.getDetails(result.imdbID)' ng-src='{{result.Poster}}' class='poster' alt='{{result.Title}} movie poster'>
+    <div class='result' ng-repeat='result in searchResults' ng-click='results.getDetails(result.imdbID)'>
+        <img ng-src='{{result.Poster}}' class='poster' alt='{{result.Title}} movie poster'>
         <div class='movie-details'>
-            <h3 class='title' ng-click='results.getDetails(result.imdbID)'>{{result.Title}} <span>({{result.Year}})</span></h3>
-            <p class='watchlist'>add to watchlist<i ng-click='results.setWatchlist(result)' class="fa fa-plus" aria-hidden="true"></i></p>
+            <h3 class='title'>{{result.Title}} <span>({{result.Year}})</span></h3>
+            <!-- <p class='watchlist'>add to watchlist<i ng-click='results.setWatchlist(result)' class="fa fa-plus" aria-hidden="true"></i></p> -->
         </div>
     </div>
 </div>
 <div class='details-modal' ng-show='modalOpen'>
-  <img ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
-  <h3>{{movieDetail.Title}}</h3>
-  <p class='rating'>{{movieDetail.imdbRating}}</p>
-  <p class='votes'>{{movieDetail.imdbVotes}}</p>
+  <i class="fa fa-times" aria-hidden="true"></i>
+  <img class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
   <ul class='detail-list'>
-    <li>Starring: {{movieDetail.Actors}}</li>
-    <li>Director: {{movieDetail.Director}}</li>
-    <li>Genre: {{movieDetail.Genre}}</li>
-    <li>Language: {{movieDetail.Language}}</li>
-    <li>Synopsis: {{movieDetail.Plot}}</li>
-    <li>Rating: {{movieDetail.Rated}}</li>
-    <li>Release Date: {{movieDetail.Released}}</li>
-    <li>Runtime: {{movieDetail.Runtime}}</li>
+    <li>
+      <h3 class='title'>{{movieDetail.Title}}</h3>
+      <p class='rating'><i class="fa fa-star-o" aria-hidden="true"></i> <span>{{movieDetail.imdbRating}}</span> / 10</p>
+    </li>
+    <li><span>Release Date:</span> {{movieDetail.Released}}</li>
+    <li><span>Starring:</span> {{movieDetail.Actors}}</li>
+    <li><span>Director:</span> {{movieDetail.Director}}</li>
+    <li><span>Genre:</span> {{movieDetail.Genre}}</li>
+    <li><span>Language:</span> {{movieDetail.Language}}</li>
+    <li><span>Synopsis:</span> {{movieDetail.Plot}}</li>
+    <li><span>Rating:</span> {{movieDetail.Rated}}</li>
+    <li><span>Runtime:</span> {{movieDetail.Runtime}}</li>
   </ul>
 </div>

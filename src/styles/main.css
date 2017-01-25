@@ -160,12 +160,16 @@ header {
 
 .result {
   background: #F6F7EB;
+  border: 5px solid #F6F7EB;
   display: flex;
   font-size: 16px;
   justify-content: space-between;
   margin: 20px;
-  transition: all .7s ease;
-  width: 370px; }
+  transition: all .5s ease;
+  width: 350px; }
+  .result:hover {
+    border: 5px solid rgba(191, 33, 30, 0.8);
+    cursor: pointer; }
   .result .movie-details {
     display: flex;
     flex-direction: column;
@@ -181,13 +185,13 @@ header {
       .result .movie-details .title span {
         font-weight: 500; }
     .result .movie-details .watchlist {
-      color: #BF211E;
+      color: #191716;
       font-size: 16px; }
       .result .movie-details .watchlist .fa-plus {
-        color: #191716;
+        color: #BF211E;
         margin-left: 10px; }
         .result .movie-details .watchlist .fa-plus:hover {
-          color: #BF211E; }
+          color: #191716; }
 
 .search-terms {
   color: #F6F7EB;
@@ -203,5 +207,55 @@ header {
   margin: 15px; }
   .poster:hover {
     cursor: pointer; }
+
+body.modal-open {
+  -webkit-filter: blur(20px);
+  filter: blur(20px); }
+
+.details-modal {
+  background: #F6F7EB;
+  border: 5px solid #191716;
+  display: flex;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; }
+  .details-modal .fa-window-close-o {
+    position: absolute; }
+  .details-modal .modal-poster {
+    height: 350px;
+    margin: 15px; }
+  .details-modal .fa-times {
+    color: #BF211E;
+    font-size: 40px;
+    position: fixed;
+    top: -5%;
+    right: -2.3%; }
+  .details-modal .detail-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: flex;
+    margin-top: 15px; }
+    .details-modal .detail-list .title {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 30px;
+      width: 75%; }
+    .details-modal .detail-list .rating {
+      margin-right: 15px; }
+      .details-modal .detail-list .rating .fa-star-o {
+        color: #F1D302;
+        font-size: 25px; }
+      .details-modal .detail-list .rating span {
+        font-size: 25px; }
+    .details-modal .detail-list li {
+      line-height: 24px;
+      margin-bottom: 10px; }
+      .details-modal .detail-list li:first-child {
+        display: flex;
+        justify-content: space-between; }
+      .details-modal .detail-list li span {
+        font-weight: 700; }
 
 /*# sourceMappingURL=main.css.map */

@@ -7,12 +7,18 @@
 
 .result {
   background: $ecruWhite;
+  border: 5px solid $ecruWhite;
   display: flex;
   font-size: 16px;
   justify-content: space-between;
   margin: 20px;
-  transition: all .7s ease;
-  width: 370px;
+  transition: all .5s ease;
+  width: 350px;
+
+  &:hover {
+    border: 5px solid rgba(191,33,30,.8);
+    cursor: pointer;
+  }
 
   .movie-details {
     display: flex;
@@ -36,15 +42,15 @@
     }
 
     .watchlist {
-      color: $cinnabar;
+      color: $codGray;
       font-size: 16px;
 
       .fa-plus {
-        color: $codGray;
+        color: $cinnabar;
         margin-left: $hspace;
 
         &:hover {
-          color: $cinnabar;
+          color: $codGray;
         }
       }
     }
