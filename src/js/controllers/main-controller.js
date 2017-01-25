@@ -8,7 +8,7 @@ angular.module('movieApp').controller('MainController', function($state, $scope,
           result.Poster = "http://www.newdesignfile.com/postpic/2015/02/no-icon-available_68024.png";
         }
       });
-      SearchService.setSearchResults(response.data.Search);
+      SearchService.setSearchResults(search);
       $state.current.name !== 'movieAppParent.results' ? $state.go('movieAppParent.results') : $state.reload();
     });
     this.searchTerms = '';
