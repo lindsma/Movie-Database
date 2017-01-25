@@ -208,54 +208,59 @@ header {
   .poster:hover {
     cursor: pointer; }
 
-body.modal-open {
-  -webkit-filter: blur(20px);
-  filter: blur(20px); }
-
 .details-modal {
   background: #F6F7EB;
   border: 5px solid #191716;
+  box-shadow: 0 0 0 300px rgba(128, 128, 128, 0.7);
   display: flex;
   position: fixed;
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
   width: 60%; }
-  .details-modal .fa-window-close-o {
-    position: absolute; }
-  .details-modal .modal-poster {
-    height: 350px;
-    margin: 15px; }
-  .details-modal .fa-times {
-    color: #BF211E;
-    font-size: 40px;
-    position: fixed;
-    top: -5%;
-    right: -2.3%; }
-  .details-modal .detail-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: flex;
-    margin-top: 15px; }
-    .details-modal .detail-list .title {
-      font-size: 25px;
-      font-weight: 700;
-      line-height: 30px;
-      width: 75%; }
-    .details-modal .detail-list .rating {
-      margin-right: 15px; }
-      .details-modal .detail-list .rating .fa-star-o {
-        color: #F1D302;
-        font-size: 25px; }
-      .details-modal .detail-list .rating span {
-        font-size: 25px; }
-    .details-modal .detail-list li {
-      line-height: 24px;
-      margin-bottom: 10px; }
-      .details-modal .detail-list li:first-child {
-        display: flex;
-        justify-content: space-between; }
-      .details-modal .detail-list li span {
-        font-weight: 700; }
+
+.modal-poster {
+  height: 350px;
+  margin: 15px; }
+
+.fa-times {
+  color: #BF211E;
+  font-size: 40px;
+  position: fixed;
+  top: -5%;
+  right: -2.3%;
+  transition: all 0.5s ease; }
+  .fa-times:hover {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: flex;
+  margin-top: 15px; }
+  .detail-list .title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    width: 75%; }
+  .detail-list .rating {
+    margin-right: 15px; }
+    .detail-list .rating .fa-star-o {
+      color: #F1D302;
+      font-size: 25px; }
+    .detail-list .rating span {
+      font-size: 25px; }
+  .detail-list li {
+    line-height: 24px;
+    margin-bottom: 10px; }
+    .detail-list li:first-child {
+      display: flex;
+      justify-content: space-between; }
+    .detail-list li span {
+      font-weight: 700; }
 
 /*# sourceMappingURL=main.css.map */

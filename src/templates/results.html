@@ -8,21 +8,23 @@
         </div>
     </div>
 </div>
-<div class='details-modal' ng-show='modalOpen'>
-  <i class="fa fa-times" aria-hidden="true"></i>
-  <img class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
-  <ul class='detail-list'>
-    <li>
-      <h3 class='title'>{{movieDetail.Title}}</h3>
-      <p class='rating'><i class="fa fa-star-o" aria-hidden="true"></i> <span>{{movieDetail.imdbRating}}</span> / 10</p>
-    </li>
-    <li><span>Release Date:</span> {{movieDetail.Released}}</li>
-    <li><span>Starring:</span> {{movieDetail.Actors}}</li>
-    <li><span>Director:</span> {{movieDetail.Director}}</li>
-    <li><span>Genre:</span> {{movieDetail.Genre}}</li>
-    <li><span>Language:</span> {{movieDetail.Language}}</li>
-    <li><span>Synopsis:</span> {{movieDetail.Plot}}</li>
-    <li><span>Rating:</span> {{movieDetail.Rated}}</li>
-    <li><span>Runtime:</span> {{movieDetail.Runtime}}</li>
-  </ul>
+<div class='details-container' ng-show='modalOpen'>
+    <div class='details-modal'>
+        <i class="fa fa-times" aria-hidden="true" ng-click='modalOpen = !modalOpen'></i>
+        <img class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
+        <ul class='detail-list'>
+            <li>
+                <h3 class='title'>{{movieDetail.Title}}</h3>
+                <p class='rating'><i class="fa fa-star-o" aria-hidden="true"></i> <span>{{movieDetail.imdbRating}}</span> / 10</p>
+            </li>
+            <li><span>Release Date:</span> {{movieDetail.Released}}</li>
+            <li><span>Starring:</span> {{movieDetail.Actors}}</li>
+            <li><span>Director:</span> {{movieDetail.Director}}</li>
+            <li><span>Genre:</span> {{movieDetail.Genre}}</li>
+            <li><span>Language:</span> {{movieDetail.Language}}</li>
+            <li><span>Synopsis:</span> {{movieDetail.Plot}}</li>
+            <li><span>Rating:</span> {{movieDetail.Rated}}</li>
+            <li><span>Runtime:</span> {{movieDetail.Runtime}}</li>
+        </ul>
+    </div>
 </div>
