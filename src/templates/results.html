@@ -11,7 +11,7 @@
 <div class='details-container' ng-show='modalOpen'>
     <div class='details-modal'>
         <i class="fa fa-times" aria-hidden="true" ng-click='modalOpen = !modalOpen'></i>
-        <img class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
+        <img ng-cloak class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
         <ul class='detail-list'>
             <li>
                 <h3 class='title'>{{movieDetail.Title}}</h3>

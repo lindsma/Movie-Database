@@ -16,7 +16,7 @@ this.getDetails = function(movieID) {
   SearchService.findByID(movieID, function(response) {
     $scope.movieDetail = response.data;
     $scope.modalOpen = true;
-    console.log($scope.movieDetail);
+    $('')
   });
 }
 

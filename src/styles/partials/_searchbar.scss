@@ -76,7 +76,7 @@
         .fa-search {
             color: $ecruWhite;
 
-            &:hover {
+            &:active {
                 color: $cinnabar;
             }
         }
@@ -84,6 +84,7 @@
         .search-btn {
             background: $codGray;
             border: none;
+            outline: none;
         }
 
         input {

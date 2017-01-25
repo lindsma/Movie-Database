@@ -139,11 +139,12 @@ header {
     justify-content: center; }
     .search form .fa-search {
       color: #F6F7EB; }
-      .search form .fa-search:hover {
+      .search form .fa-search:active {
         color: #BF211E; }
     .search form .search-btn {
       background: #191716;
-      border: none; }
+      border: none;
+      outline: none; }
     .search form input {
       background: #191716;
       border: none;
