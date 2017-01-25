@@ -175,10 +175,11 @@ header {
       font-size: 18px;
       font-weight: 700;
       line-height: 24px; }
+      .result .movie-details .title:hover {
+        text-decoration: underline;
+        cursor: pointer; }
       .result .movie-details .title span {
         font-weight: 500; }
-    .result .movie-details .more-info {
-      color: #191716; }
     .result .movie-details .watchlist {
       color: #BF211E;
       font-size: 16px; }
@@ -200,5 +201,7 @@ header {
 .poster {
   height: 200px;
   margin: 15px; }
+  .poster:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

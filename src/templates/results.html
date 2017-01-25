@@ -1,11 +1,26 @@
 <p ng-show='searchTerms' class='search-terms'>search results for <span>{{searchTerms}}</span></p>
 <div class='results-container'>
     <div class='result' ng-repeat='result in searchResults'>
-        <img ng-src='{{result.Poster}}' class='poster' alt='{{result.Title}} movie poster'>
+        <img ng-click='results.getDetails(result.imdbID)' ng-src='{{result.Poster}}' class='poster' alt='{{result.Title}} movie poster'>
         <div class='movie-details'>
-            <h3 class='title'>{{result.Title}} <span>({{result.Year}})</span></h3>
-            <a ng-href='http://www.imdb.com/title/{{result.imdbID}}' class='more-info'>More Info</a>
+            <h3 class='title' ng-click='results.getDetails(result.imdbID)'>{{result.Title}} <span>({{result.Year}})</span></h3>
             <p class='watchlist'>add to watchlist<i ng-click='results.setWatchlist(result)' class="fa fa-plus" aria-hidden="true"></i></p>
         </div>
     </div>
+</div>
+<div class='details-modal' ng-show='modalOpen'>
+  <img ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
+  <h3>{{movieDetail.Title}}</h3>
+  <p class='rating'>{{movieDetail.imdbRating}}</p>
+  <p class='votes'>{{movieDetail.imdbVotes}}</p>
+  <ul class='detail-list'>
+    <li>Starring: {{movieDetail.Actors}}</li>
+    <li>Director: {{movieDetail.Director}}</li>
+    <li>Genre: {{movieDetail.Genre}}</li>
+    <li>Language: {{movieDetail.Language}}</li>
+    <li>Synopsis: {{movieDetail.Plot}}</li>
+    <li>Rating: {{movieDetail.Rated}}</li>
+    <li>Release Date: {{movieDetail.Released}}</li>
+    <li>Runtime: {{movieDetail.Runtime}}</li>
+  </ul>
 </div>

@@ -9,6 +9,15 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
         });
     }
 
+    function findByID(movieID, callback) {
+        $http({
+            method: 'GET',
+            url: "http://www.omdbapi.com/?i=" + movieID
+        }).then(callback, function errorCallback(response) {
+            console.log(response);
+        });
+    }
+
     function setSearchResults(searchResults) {
         localStorageService.set('searchResults', searchResults);
     }
@@ -40,6 +49,7 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
       setSearchTerms: setSearchTerms,
       getSearchTerms: getSearchTerms,
       setWatchlist: setWatchlist,
-      getWatchlist: getWatchlist
+      getWatchlist: getWatchlist,
+      findByID: findByID
     };
 });

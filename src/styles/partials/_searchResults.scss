@@ -25,13 +25,14 @@
       font-weight: 700;
       line-height: 24px;
 
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
       span {
         font-weight: 500;
       }
-    }
-
-    .more-info {
-      color: $codGray;
     }
 
     .watchlist {
@@ -65,4 +66,8 @@
 .poster {
   height: 200px;
   margin: $vspace;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
