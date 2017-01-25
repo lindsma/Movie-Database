@@ -40,20 +40,6 @@
         font-weight: 500;
       }
     }
-
-    .watchlist {
-      color: $codGray;
-      font-size: 16px;
-
-      .fa-plus {
-        color: $cinnabar;
-        margin-left: $hspace;
-
-        &:hover {
-          color: $codGray;
-        }
-      }
-    }
   }
 }
 

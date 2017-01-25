@@ -185,14 +185,6 @@ header {
         cursor: pointer; }
       .result .movie-details .title span {
         font-weight: 500; }
-    .result .movie-details .watchlist {
-      color: #191716;
-      font-size: 16px; }
-      .result .movie-details .watchlist .fa-plus {
-        color: #BF211E;
-        margin-left: 10px; }
-        .result .movie-details .watchlist .fa-plus:hover {
-          color: #191716; }
 
 .search-terms {
   color: #F6F7EB;
@@ -219,10 +211,6 @@ header {
   left: 50%;
   transform: translateX(-50%);
   width: 60%; }
-
-.modal-poster {
-  height: 350px;
-  margin: 15px; }
 
 .fa-times {
   color: #BF211E;
@@ -263,5 +251,25 @@ header {
       justify-content: space-between; }
     .detail-list li span {
       font-weight: 700; }
+
+.left-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .left-modal-container .modal-poster {
+    align-self: center;
+    height: 350px;
+    margin: 15px; }
+  .left-modal-container .watchlist {
+    align-self: center;
+    color: #191716;
+    font-size: 20px;
+    text-align: center;
+    width: 100%; }
+    .left-modal-container .watchlist .fa-plus {
+      color: #BF211E;
+      margin-left: 10px; }
+      .left-modal-container .watchlist .fa-plus:hover {
+        color: #191716; }
 
 /*# sourceMappingURL=main.css.map */

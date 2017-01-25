@@ -10,11 +10,6 @@
     width: 60%;
 }
 
-.modal-poster {
-    height: 350px;
-    margin: $vspace;
-}
-
 .fa-times {
     color: $cinnabar;
     font-size: 40px;
@@ -65,6 +60,35 @@
 
         span {
             font-weight: 700;
+        }
+    }
+}
+
+.left-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+    .modal-poster {
+        align-self: center;
+        height: 350px;
+        margin: $vspace;
+    }
+
+    .watchlist {
+        align-self: center;
+        color: $codGray;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+
+        .fa-plus {
+            color: $cinnabar;
+            margin-left: $hspace;
+
+            &:hover {
+                color: $codGray;
+            }
         }
     }
 }

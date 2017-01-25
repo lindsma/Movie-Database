@@ -4,14 +4,16 @@
         <img ng-src='{{result.Poster}}' class='poster' alt='{{result.Title}} movie poster'>
         <div class='movie-details'>
             <h3 class='title'>{{result.Title}} <span>({{result.Year}})</span></h3>
-            <!-- <p class='watchlist'>add to watchlist<i ng-click='results.setWatchlist(result)' class="fa fa-plus" aria-hidden="true"></i></p> -->
         </div>
     </div>
 </div>
 <div class='details-container' ng-show='modalOpen'>
     <div class='details-modal'>
         <i class="fa fa-times" aria-hidden="true" ng-click='modalOpen = !modalOpen'></i>
-        <img ng-cloak class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
+        <div class='left-modal-container'>
+            <img ng-cloak class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
+            <p class='watchlist'>add to watchlist<i ng-click='results.setWatchlist(result)' class="fa fa-plus" aria-hidden="true"></i></p>
+        </div>
         <ul class='detail-list'>
             <li>
                 <h3 class='title'>{{movieDetail.Title}}</h3>
