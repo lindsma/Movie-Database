@@ -1,6 +1,6 @@
 # cinemaDB
 
-cinemaDB is a platform utilizing the OMDB API to allow users to search for movies and create their own watchlists. 
+cinemaDB is a web app utilizing the OMDB API to allow users to search for movies and create their own watchlists. 
 
 https://lindsma.github.io/Movie-Database/
 
