@@ -75,13 +75,29 @@
                 @include placeholder {
                     color: rgba(25, 23, 22, .5);
                 }
+                @include media(tablet) {
+                    width: 80%;
+                }
+                @include media(mobileMed) {
+                    font-size: 30px;
+                    height: 50px;
+                }
+                @include media(mobileSmall) {
+                    font-size: 25px;
+                }
             }
         }
 
         .fa-search {
             font-size: 60px;
-            line-height: 60px;
             margin-left: 15px;
+            @include media(mobileMed) {
+                font-size: 50px;
+            }
+            @include media(mobileSmall) {
+                font-size: 35px;
+                padding-right: 10px;
+            }
         }
     }
 

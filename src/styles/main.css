@@ -170,10 +170,26 @@ header {
           color: rgba(25, 23, 22, 0.5); }
         .search.results form input:-ms-input-placeholder {
           color: rgba(25, 23, 22, 0.5); }
+        @media only screen and (max-width: 650px) {
+          .search.results form input {
+            width: 80%; } }
+        @media only screen and (max-width: 435px) {
+          .search.results form input {
+            font-size: 30px;
+            height: 50px; } }
+        @media only screen and (max-width: 360px) {
+          .search.results form input {
+            font-size: 25px; } }
     .search.results .fa-search {
       font-size: 60px;
-      line-height: 60px;
       margin-left: 15px; }
+      @media only screen and (max-width: 435px) {
+        .search.results .fa-search {
+          font-size: 50px; } }
+      @media only screen and (max-width: 360px) {
+        .search.results .fa-search {
+          font-size: 35px;
+          padding-right: 10px; } }
   .search .search-header {
     color: #F1D302;
     font-family: "Open Sans", sans-serif;
