@@ -239,6 +239,9 @@ header {
   margin: 20px;
   transition: all .5s ease;
   width: 350px; }
+  @media only screen and (max-width: 435px) {
+    .result {
+      width: 280px; } }
   .result:hover {
     border: 5px solid rgba(191, 33, 30, 0.8);
     cursor: pointer; }
@@ -262,6 +265,9 @@ header {
 .poster {
   height: 200px;
   margin: 15px; }
+  @media only screen and (max-width: 435px) {
+    .poster {
+      height: 120px; } }
   .poster:hover {
     cursor: pointer; }
 
