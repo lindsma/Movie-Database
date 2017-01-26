@@ -433,7 +433,7 @@ header {
     @media only screen and (max-width: 515px) {
       .error-container .fa-exclamation-triangle {
         font-size: 80px;
-        margin: 0 0 15px 0; } }
+        margin: 0 0 15px; } }
   .error-container .error-message {
     color: #F6F7EB;
     font-family: "Open Sans", sans-serif;
