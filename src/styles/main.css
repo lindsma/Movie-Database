@@ -55,12 +55,25 @@ header {
   justify-content: space-between; }
   header .site-name {
     padding: 0 40px; }
+    @media only screen and (max-width: 435px) {
+      header .site-name {
+        padding-left: 20px; } }
+    @media only screen and (max-width: 360px) {
+      header .site-name {
+        padding-right: 30px; } }
     header .site-name a {
       color: #F1D302;
       font-family: "Righteous", cursive;
       font-size: 40px;
       line-height: 100px;
       text-decoration: none; }
+      @media only screen and (max-width: 515px) {
+        header .site-name a {
+          font-size: 30px; } }
+  @media only screen and (max-width: 360px) {
+    header nav {
+      padding-top: 20px;
+      text-align: center; } }
   header .watchlist-nav {
     color: #F6F7EB;
     font-size: 24px;
@@ -70,6 +83,15 @@ header {
     line-height: 100px;
     padding: 0 40px;
     text-decoration: none; }
+    @media only screen and (max-width: 515px) {
+      header .watchlist-nav {
+        font-size: 20px; } }
+    @media only screen and (max-width: 435px) {
+      header .watchlist-nav {
+        padding: 0 20px 0 0; } }
+    @media only screen and (max-width: 360px) {
+      header .watchlist-nav {
+        line-height: 30px; } }
     header .watchlist-nav:hover {
       color: #F1D302;
       cursor: pointer; }
@@ -78,7 +100,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  transition: all .7s ease;
+  transition: all 0.7s ease;
   width: 100%; }
   .search.home {
     position: fixed;
@@ -86,6 +108,10 @@ header {
     .search.home .search-header {
       margin-bottom: 30px;
       text-align: center; }
+      @media only screen and (max-width: 650px) {
+        .search.home .search-header {
+          font-size: 35px;
+          margin-bottom: 0; } }
     .search.home input {
       height: 100px;
       font-size: 80px;
@@ -99,9 +125,28 @@ header {
         color: rgba(255, 255, 255, 0.5); }
       .search.home input:-ms-input-placeholder {
         color: rgba(255, 255, 255, 0.5); }
+      @media only screen and (max-width: 975px) {
+        .search.home input {
+          width: 70%; } }
     .search.home .fa-search {
       font-size: 80px;
       line-height: 100px; }
+    @media only screen and (max-width: 975px) {
+      .search.home .fa-search,
+      .search.home input {
+        font-size: 60px; } }
+    @media only screen and (max-width: 650px) {
+      .search.home .fa-search,
+      .search.home input {
+        font-size: 40px; } }
+    @media only screen and (max-width: 515px) {
+      .search.home .fa-search,
+      .search.home input {
+        font-size: 30px; } }
+    @media only screen and (max-width: 360px) {
+      .search.home .fa-search,
+      .search.home input {
+        font-size: 25px; } }
   .search.results {
     padding: 20px 0;
     position: relative; }
