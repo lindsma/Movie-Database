@@ -1,10 +1,17 @@
 <p ng-show='searchTerms' class='search-terms'>search results for <span>{{searchTerms}}</span></p>
-<div class='results-container'>
+<div ng-hide="searchResults.error" class='results-container'>
     <div class='result' ng-repeat='result in searchResults' ng-click='results.getDetails(result.imdbID)'>
         <img ng-src='{{result.Poster}}' class='poster' alt='{{result.Title}} movie poster'>
         <div class='movie-details'>
             <h3 class='title'>{{result.Title}} <span>({{result.Year}})</span></h3>
         </div>
+    </div>
+</div>
+<div ng-show="searchResults.error" class='error-container'>
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <div class='error-message'>
+        <p class='one'>we can't seem to find what you're looking for.</p>
+        <p class='two'>please try again!</p>
     </div>
 </div>
 <div class='details-container' ng-show='modalOpen'>
