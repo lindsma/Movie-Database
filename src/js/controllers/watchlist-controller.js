@@ -2,7 +2,6 @@ angular.module('movieApp').controller('WatchlistController', function($state, $s
 
 $('div.search').removeClass('home').addClass('results');
 
-
 this.populateResults = function() {
     $scope.movieList = SearchService.getWatchlist();
 }

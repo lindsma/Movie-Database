@@ -7,6 +7,8 @@ angular.module('movieApp').controller('ResultsController', function($state, $sco
     }
 
     this.setWatchlist = function(watchObj) {
+        console.log(watchObj);
+        $scope.imdbID = watchObj.imdbID;
         let currentList = SearchService.getWatchlist();
         currentList.push(watchObj);
         SearchService.setWatchlist(currentList);

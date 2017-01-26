@@ -225,7 +225,7 @@ header {
   transform: translateX(-50%);
   width: 60%; }
 
-.fa-times.detail {
+.fa-times {
   color: #BF211E;
   font-size: 40px;
   position: fixed;
@@ -233,7 +233,7 @@ header {
   top: -5%;
   right: -2.3%;
   transition: all 0.5s ease; }
-  .fa-times.detail:hover {
+  .fa-times:hover {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);

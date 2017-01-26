@@ -19,7 +19,8 @@
         <i class="fa fa-times detail" aria-hidden="true" ng-click='modalOpen = !modalOpen'></i>
         <div class='left-modal-container'>
             <img ng-cloak class='modal-poster' ng-src='{{movieDetail.Poster}}' alt='{{movieDetail.Title}} poster'>
-            <p class='watchlist'>add to watchlist<i ng-click='results.setWatchlist(movieDetail)' class="fa fa-plus" aria-hidden="true"></i></p>
+            <p class='watchlist' ng-hide='imdbID === movieDetail.imdbID'>add to watchlist<i ng-click='results.setWatchlist(movieDetail)' class="fa fa-plus" aria-hidden="true"></i></p>
+            <p class='watchlist added' ng-show='imdbID === movieDetail.imdbID'>added to watchlist</p>
         </div>
         <ul class='detail-list'>
             <li>
