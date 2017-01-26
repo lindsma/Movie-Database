@@ -45,7 +45,7 @@ table {
 
 body {
   background: #191716;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", Verdana, sans-serif; }
 
 /***** Site Components ******/
 header {
@@ -63,7 +63,7 @@ header {
         padding-right: 30px; } }
     header .site-name a {
       color: #F1D302;
-      font-family: "Righteous", cursive;
+      font-family: "Righteous", Tahoma, cursive;
       font-size: 40px;
       line-height: 100px;
       text-decoration: none; }
@@ -77,7 +77,7 @@ header {
   header .watchlist-nav {
     color: #F6F7EB;
     font-size: 24px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", Verdana, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 100px;
@@ -192,7 +192,7 @@ header {
           padding-right: 10px; } }
   .search .search-header {
     color: #F1D302;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", Verdana, sans-serif;
     font-size: 40px;
     font-weight: bold; }
   .search form {
@@ -210,13 +210,13 @@ header {
       background: #191716;
       border: none;
       color: #F6F7EB;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", Verdana, sans-serif;
       font-weight: bold;
       outline: none; }
 
 .search-terms {
   color: #F6F7EB;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Verdana, sans-serif;
   font-size: 20px;
   text-align: center; }
   .search-terms span {
@@ -228,7 +228,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  transition: all .7s ease; }
+  transition: all 0.7s ease; }
 
 .result {
   background: #F6F7EB;
@@ -237,7 +237,7 @@ header {
   font-size: 16px;
   justify-content: space-between;
   margin: 20px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   width: 350px; }
   @media only screen and (max-width: 435px) {
     .result {
@@ -418,6 +418,7 @@ header {
   display: flex;
   justify-content: center;
   margin: 40px auto;
+  transition: all 0.7s ease;
   width: 60%; }
   @media only screen and (max-width: 650px) {
     .error-container {
@@ -436,7 +437,7 @@ header {
         margin: 0 0 15px; } }
   .error-container .error-message {
     color: #F6F7EB;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", Verdana, sans-serif;
     font-size: 30px; }
     .error-container .error-message p {
       line-height: 48px;

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    transition: all 0.7s ease;
+    transition: $slowEase;
     width: 100%;
 
     &.home {

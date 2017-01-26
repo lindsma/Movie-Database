@@ -5,20 +5,19 @@
     <meta charset='UTF-8'>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>cinemaDb</title>
-    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
-    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://use.fontawesome.com/6b4891366d.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Londrina+Shadow|Monoton|Raleway+Dots|Righteous" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="lib/styles/main.min.css"> -->
-    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="lib/styles/main.min.css">
 </head>
 
 <body ng-app='movieApp' ng-controller='MainController as main'>
     <header>
-      <h1 class='site-name'><a ng-click='main.revertStyles()' ui-sref='movieAppParent.home'>cinemaDb</a></h1>
-      <nav>
-        <a class='watchlist-nav' ui-sref='movieAppParent.watchlist'>my watchlist</a>
-      </nav>
+        <h1 class='site-name'><a ng-click='main.revertStyles()' ui-sref='movieAppParent.home'>cinemaDb</a></h1>
+        <nav>
+            <a class='watchlist-nav' ui-sref='movieAppParent.watchlist'>my watchlist</a>
+        </nav>
     </header>
     <div class='search home'>
         <p class='search-header'>find a movie</p>
@@ -28,15 +27,14 @@
         </form>
     </div>
     <main>
-      <ui-view></ui-view>
+        <ui-view></ui-view>
     </main>
 
     <script src="lib/js/vendor.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="angular-local-storage/dist/angular-local-storage.min.js"></script>
-  <!-- REVERT BACK TO LIB/JS WHEN COMPLETE-->
-    <script src="src/js/app.js"></script>
+    <script src="lib/js/app.js"></script>
     <script src="src/js/controllers/main-controller.js"></script>
     <script src="src/js/controllers/results-controller.js"></script>
     <script src="src/js/controllers/watchlist-controller.js"></script>

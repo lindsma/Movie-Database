@@ -1,79 +1,78 @@
 .results-container,
 .watchlist-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  transition: all .7s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: $slowEase;
 }
 
 .result {
-  background: $ecruWhite;
-  border: 5px solid $ecruWhite;
-  display: flex;
-  font-size: 16px;
-  justify-content: space-between;
-  margin: 20px;
-  transition: all .5s ease;
-  width: 350px;
-
-  @include media(mobileMed) {
-    width: 280px;
-  }
-
-  &:hover {
-    border: 5px solid rgba(191,33,30,.8);
-    cursor: pointer;
-  }
-  &.watchlist:hover {
-    cursor: default;
-  }
-
-  .movie-details {
+    background: $ecruWhite;
+    border: 5px solid $ecruWhite;
     display: flex;
-    flex-direction: column;
+    font-size: 16px;
     justify-content: space-between;
-    margin: $vspace $hspace;
-
-    .title {
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 24px;
-
-      &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-
-      span {
-        font-weight: 500;
-      }
+    margin: 20px;
+    transition: $ease;
+    width: 350px;
+    @include media(mobileMed) {
+        width: 280px;
     }
-  }
+
+    &:hover {
+        border: 5px solid rgba(191,33,30,.8);
+        cursor: pointer;
+    }
+
+    &.watchlist:hover {
+        cursor: default;
+    }
+
+    .movie-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: $vspace $hspace;
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            span {
+                font-weight: 500;
+            }
+        }
+    }
 }
 
 .poster {
-  height: 200px;
-  margin: $vspace;
+    height: 200px;
+    margin: $vspace;
+    @include media(mobileMed) {
+        height: 120px;
+    }
 
-  @include media(mobileMed) {
-    height: 120px;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .remove {
-  align-self: flex-end;
-  color: $cinnabar;
-  display: none;
+    align-self: flex-end;
+    color: $cinnabar;
+    display: none;
 
-  &:hover {
-    cursor:pointer;
-  }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .result.watchlist:hover .remove {
-  display: block;
+    display: block;
 }

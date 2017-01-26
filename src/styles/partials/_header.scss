@@ -6,58 +6,54 @@ header {
 
     .site-name {
         padding: 0 40px;
-
         @include media(mobileMed) {
-          padding-left: 20px;
+            padding-left: 20px;
         }
-
         @include media(mobileSmall) {
-          padding-right: 30px;
+            padding-right: 30px;
         }
 
         a {
-          color: $gold;
-          font-family: $righteous;
-          font-size: 40px;
-          line-height: 100px;
-          text-decoration: none;
-
-          @include media(mobile) {
-            font-size: 30px;
-          }
+            color: $gold;
+            font-family: $righteous;
+            font-size: 40px;
+            line-height: 100px;
+            text-decoration: none;
+            @include media(mobile) {
+                font-size: 30px;
+            }
         }
     }
 
     nav {
-      @include media(mobileSmall) {
-        padding-top: 20px;
-        text-align: center;
-      }
+        @include media(mobileSmall) {
+            padding-top: 20px;
+            text-align: center;
+        }
     }
 
     .watchlist-nav {
-      color: $ecruWhite;
-      font-size: 24px;
-      font-family: $openSans;
-      font-weight: 700;
-      letter-spacing: 1px;
-      line-height: 100px;
-      padding: 0 40px;
-      text-decoration: none;
+        color: $ecruWhite;
+        font-size: 24px;
+        font-family: $openSans;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 100px;
+        padding: 0 40px;
+        text-decoration: none;
+        @include media(mobile) {
+            font-size: 20px;
+        }
+        @include media(mobileMed) {
+            padding: 0 20px 0 0;
+        }
+        @include media(mobileSmall) {
+            line-height: 30px;
+        }
 
-      @include media(mobile) {
-        font-size: 20px;
-      }
-      @include media(mobileMed) {
-        padding: 0 20px 0 0;
-      }
-      @include media(mobileSmall) {
-        line-height: 30px;
-      }
-
-      &:hover {
-        color: $gold;
-        cursor: pointer;
-      }
+        &:hover {
+            color: $gold;
+            cursor: pointer;
+        }
     }
 }

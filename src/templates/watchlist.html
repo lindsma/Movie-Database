@@ -1,5 +1,5 @@
 <div class='watchlist-container'>
-    <div class='result watchlist' ng-repeat='movie in movieList' >
+    <div class='result watchlist' ng-repeat='movie in movieList'>
         <img ng-src='{{movie.Poster}}' class='poster' alt='{{movie.Title}} movie poster' ng-click='watchlist.getDetails(movie)'>
         <div class='movie-details'>
             <h3 class='title' ng-click='watchlist.getDetails(movie)'>{{movie.Title}} <span>({{movie.Year}})</span></h3>

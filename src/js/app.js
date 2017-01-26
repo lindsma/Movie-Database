@@ -12,7 +12,6 @@
           template: '<ui-view></ui-view>'
       }).state('movieAppParent.home', {
           url: '',
-          templateUrl: 'src/templates/home.html'
       }).state('movieAppParent.results', {
           url:'search-results',
           controller: 'ResultsController as results',
