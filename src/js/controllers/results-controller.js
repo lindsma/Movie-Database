@@ -7,11 +7,15 @@ angular.module('movieApp').controller('ResultsController', function($state, $sco
     }
 
     this.setWatchlist = function(watchObj) {
-        console.log(watchObj);
         $scope.imdbID = watchObj.imdbID;
         let currentList = SearchService.getWatchlist();
-        currentList.push(watchObj);
-        SearchService.setWatchlist(currentList);
+        let arr = currentList.filter(movie => {
+          return watchObj.imdbID === movie.imdbID;
+        });
+        if (arr.length < 1) {
+          currentList.push(watchObj);
+          SearchService.setWatchlist(currentList);
+        }
     }
 
     this.getDetails = function(movieID) {
