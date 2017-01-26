@@ -1,5 +1,6 @@
 angular.module('movieApp').service('SearchService', function($http, $location, $state, localStorageService) {
-    function searchMovies(searchTerms, callback) {
+    // wildcard search for movie
+    searchMovies = (searchTerms, callback) => {
         setSearchTerms(searchTerms);
         $http({
             method: 'GET',
@@ -8,8 +9,8 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
             console.log(response);
         });
     }
-
-    function findByID(movieID, callback) {
+    // search for movie by imdbID
+    findByID = (movieID, callback) => {
         $http({
             method: 'GET',
             url: "http://www.omdbapi.com/?i=" + movieID
@@ -17,28 +18,28 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
             console.log(response);
         });
     }
-
-    function setSearchResults(searchResults) {
+    // set search results in local storage
+    setSearchResults = (searchResults) => {
         localStorageService.set('searchResults', searchResults);
     }
-
-    function getSearchResults() {
+    // get search results from local storage
+    getSearchResults = () => {
         return localStorageService.get('searchResults') || [];
     }
-
-    function setSearchTerms(searchTerms) {
+    // set search terms in local storage
+    setSearchTerms = (searchTerms) => {
         localStorageService.set('searchTerms', searchTerms);
     }
-
-    function getSearchTerms() {
+    // get search terms from local storage
+    getSearchTerms = () => {
         return localStorageService.get('searchTerms') || false;
     }
-
-    function getWatchlist() {
+    // get watchlist from local storage
+    getWatchlist = () => {
         return localStorageService.get('watchlist') || [];
     }
-
-    function setWatchlist(newList) {
+    // set watchlist in local storage
+    setWatchlist = (newList) => {
         localStorageService.set('watchlist', newList);
     }
 
