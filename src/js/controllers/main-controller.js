@@ -1,6 +1,8 @@
 angular.module('movieApp').controller('MainController', function($state, $scope, SearchService) {
     this.searchTerms = '';
-    this.searchMovies = function(searchTerms) {
+    // search movies and determine whether to use poster link or backup image
+    // redirect to search-results page
+    this.searchMovies = (searchTerms) => {
         let search = '';
         SearchService.searchMovies(searchTerms, function(response) {
             if (response.data.Response === 'True') {
@@ -11,17 +13,17 @@ angular.module('movieApp').controller('MainController', function($state, $scope,
                     }
                 });
             } else {
-               search = {
-                 error: true
-               }
+                search = {
+                    error: true
+                }
             }
             SearchService.setSearchResults(search);
             $state.current.name !== 'movieAppParent.results' ? $state.go('movieAppParent.results') : $state.reload();
         });
         this.searchTerms = '';
     }
-
-    this.revertStyles = function() {
+    // apply 'home' searchbar styles
+    this.revertStyles = () => {
         $('div.search').removeClass('results').addClass('home');
     }
 });
