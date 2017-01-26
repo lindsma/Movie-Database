@@ -17,7 +17,7 @@
     <header>
       <h1 class='site-name'><a ng-click='main.revertStyles()' ui-sref='movieAppParent.home'>cinemaDb</a></h1>
       <nav>
-        <a class='watchlist-nav' ui-sref='movieAppParent.watchlist' ng-click='main.revertStyles()'>my watchlist</a>
+        <a class='watchlist-nav' ui-sref='movieAppParent.watchlist'>my watchlist</a>
       </nav>
     </header>
     <div class='search home'>
@@ -30,7 +30,7 @@
     <main>
       <ui-view></ui-view>
     </main>
-    
+
     <script src="lib/js/vendor.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
