@@ -4,16 +4,17 @@
     box-shadow: 0 0 0 300px rgba(128, 128, 128, .7);
     display: flex;
     position: fixed;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
 }
 
-.fa-times {
+.fa-times.detail {
     color: $cinnabar;
     font-size: 40px;
     position: fixed;
+    text-shadow: 1px 3px #d3d3d3;
     top: -5%;
     right: -2.3%;
     transition: all 0.5s ease;
@@ -79,6 +80,7 @@
         align-self: center;
         color: $codGray;
         font-size: 20px;
+        margin-bottom: $vspace;
         text-align: center;
         width: 100%;
 

@@ -97,3 +97,15 @@
         }
     }
 }
+
+.search-terms {
+  color: $ecruWhite;
+  font-family: $openSans;
+  font-size: 20px;
+  text-align: center;
+
+  span {
+    color: $gold;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,31 @@
+<div class='watchlist-container'>
+    <div class='result watchlist' ng-repeat='movie in movieList' >
+        <img ng-src='{{movie.Poster}}' class='poster' alt='{{movie.Title}} movie poster' ng-click='watchlist.getDetails(movie)'>
+        <div class='movie-details'>
+            <h3 class='title' ng-click='watchlist.getDetails(movie)'>{{movie.Title}} <span>({{movie.Year}})</span></h3>
+            <p class='remove' ng-click='watchlist.removeMovie($index)'>remove</p>
+        </div>
+    </div>
+</div>
+<div class='details-container' ng-show='modalOpen'>
+    <div class='details-modal'>
+        <i class="fa fa-times" aria-hidden="true" ng-click='modalOpen = !modalOpen'></i>
+        <div class='left-modal-container'>
+            <img ng-cloak class='modal-poster' ng-src='{{currentMovie.Poster}}' alt='{{currentMovie.Title}} poster'>
+        </div>
+        <ul class='detail-list'>
+            <li>
+                <h3 class='title'>{{currentMovie.Title}}</h3>
+                <p class='rating'><i class="fa fa-star-o" aria-hidden="true"></i> <span>{{currentMovie.imdbRating}}</span> / 10</p>
+            </li>
+            <li><span>Release Date:</span> {{currentMovie.Released}}</li>
+            <li><span>Starring:</span> {{currentMovie.Actors}}</li>
+            <li><span>Director:</span> {{currentMovie.Director}}</li>
+            <li><span>Genre:</span> {{currentMovie.Genre}}</li>
+            <li><span>Language:</span> {{currentMovie.Language}}</li>
+            <li><span>Synopsis:</span> {{currentMovie.Plot}}</li>
+            <li><span>Rating:</span> {{currentMovie.Rated}}</li>
+            <li><span>Runtime:</span> {{currentMovie.Runtime}}</li>
+        </ul>
+    </div>
+</div>
