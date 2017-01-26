@@ -7,7 +7,19 @@
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
+    transition: $slowEase;
     width: 60%;
+    @include media(desktopLarge) {
+        width: 75%;
+    }
+    @include media(desktop) {
+        width: 80%;
+    }
+    @include media(tabletLarge) {
+        flex-direction: column-reverse;
+        top: 15%;
+        width: 90%;
+    }
 }
 
 .fa-times {
@@ -17,7 +29,19 @@
     text-shadow: 1px 3px #d3d3d3;
     top: -5%;
     right: -2.3%;
-    transition: all 0.5s ease;
+    transition: $ease;
+
+    @include media(tabletLarge) {
+      right: -2.5%;
+    }
+
+    @include media(mobile) {
+      right: -4.6%;
+    }
+
+    @include media(mobileSmall) {
+      right: -5.7%;
+    }
 
     &:hover {
         @include transform(rotate(45deg));
@@ -27,18 +51,37 @@
 .detail-list {
     display: flex;
     flex-direction: column;
-    flex-wrap: flex;
-    margin-top: $vspace;
+    margin: $vspace $vspace 0 0;
+
+    @include media(desktop) {
+      font-size: 16px;
+    }
+
+    @include media(tabletLarge) {
+      margin-left: $vspace;
+    }
 
     .title {
         font-size: 25px;
         font-weight: 700;
         line-height: 30px;
         width: 75%;
+        @include media(desktop) {
+            font-size: 20px;
+            width: 70%;
+        }
+        @include media(desktop) {
+            font-size: 18px;
+            width: 60%;
+        }
     }
 
     .rating {
         margin-right: $vspace;
+
+        @include media(mobileSmall) {
+          margin-right: 0;
+        }
 
         .fa-star-o {
             color: $gold;
@@ -47,6 +90,16 @@
 
         span {
             font-size: 25px;
+        }
+
+        .fa-star-o,
+        span {
+            @include media(desktop) {
+                font-size: 20px;
+            }
+            @include media(tabletLarge) {
+                font-size: 18px;
+            }
         }
     }
 
@@ -66,14 +119,30 @@
 }
 
 .left-modal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media(tabletLarge) {
+      justify-content: flex-start;
+    }
 
     .modal-poster {
         align-self: center;
         height: 350px;
         margin: $vspace;
+
+        @include media(desktop) {
+          height: 300px;
+        }
+
+        @include media(desktop) {
+          height: 250px;
+        }
+
+        @include media(tabletLarge) {
+          display: none;
+        }
     }
 
     .watchlist {
@@ -83,6 +152,10 @@
         margin-bottom: $vspace;
         text-align: center;
         width: 100%;
+
+        @include media(tabletLarge) {
+          margin-top: $vspace;
+        }
 
         .fa-plus {
             color: $cinnabar;

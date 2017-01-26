@@ -290,7 +290,19 @@ header {
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 0.7s ease;
   width: 60%; }
+  @media only screen and (max-width: 1200px) {
+    .details-modal {
+      width: 75%; } }
+  @media only screen and (max-width: 975px) {
+    .details-modal {
+      width: 80%; } }
+  @media only screen and (max-width: 750px) {
+    .details-modal {
+      flex-direction: column-reverse;
+      top: 15%;
+      width: 90%; } }
 
 .fa-times {
   color: #BF211E;
@@ -300,6 +312,15 @@ header {
   top: -5%;
   right: -2.3%;
   transition: all 0.5s ease; }
+  @media only screen and (max-width: 750px) {
+    .fa-times {
+      right: -2.5%; } }
+  @media only screen and (max-width: 515px) {
+    .fa-times {
+      right: -4.6%; } }
+  @media only screen and (max-width: 360px) {
+    .fa-times {
+      right: -5.7%; } }
   .fa-times:hover {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -310,20 +331,44 @@ header {
 .detail-list {
   display: flex;
   flex-direction: column;
-  flex-wrap: flex;
-  margin-top: 15px; }
+  margin: 15px 15px 0 0; }
+  @media only screen and (max-width: 975px) {
+    .detail-list {
+      font-size: 16px; } }
+  @media only screen and (max-width: 750px) {
+    .detail-list {
+      margin-left: 15px; } }
   .detail-list .title {
     font-size: 25px;
     font-weight: 700;
     line-height: 30px;
     width: 75%; }
+    @media only screen and (max-width: 975px) {
+      .detail-list .title {
+        font-size: 20px;
+        width: 70%; } }
+    @media only screen and (max-width: 975px) {
+      .detail-list .title {
+        font-size: 18px;
+        width: 60%; } }
   .detail-list .rating {
     margin-right: 15px; }
+    @media only screen and (max-width: 360px) {
+      .detail-list .rating {
+        margin-right: 0; } }
     .detail-list .rating .fa-star-o {
       color: #F1D302;
       font-size: 25px; }
     .detail-list .rating span {
       font-size: 25px; }
+    @media only screen and (max-width: 975px) {
+      .detail-list .rating .fa-star-o,
+      .detail-list .rating span {
+        font-size: 20px; } }
+    @media only screen and (max-width: 750px) {
+      .detail-list .rating .fa-star-o,
+      .detail-list .rating span {
+        font-size: 18px; } }
   .detail-list li {
     line-height: 24px;
     margin-bottom: 10px; }
@@ -337,10 +382,22 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media only screen and (max-width: 750px) {
+    .left-modal-container {
+      justify-content: flex-start; } }
   .left-modal-container .modal-poster {
     align-self: center;
     height: 350px;
     margin: 15px; }
+    @media only screen and (max-width: 975px) {
+      .left-modal-container .modal-poster {
+        height: 300px; } }
+    @media only screen and (max-width: 975px) {
+      .left-modal-container .modal-poster {
+        height: 250px; } }
+    @media only screen and (max-width: 750px) {
+      .left-modal-container .modal-poster {
+        display: none; } }
   .left-modal-container .watchlist {
     align-self: center;
     color: #191716;
@@ -348,6 +405,9 @@ header {
     margin-bottom: 15px;
     text-align: center;
     width: 100%; }
+    @media only screen and (max-width: 750px) {
+      .left-modal-container .watchlist {
+        margin-top: 15px; } }
     .left-modal-container .watchlist .fa-plus {
       color: #BF211E;
       margin-left: 10px; }
