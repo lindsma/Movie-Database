@@ -8,7 +8,9 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
         }).then(callback, function errorCallback(response) {
             if (response.status === -1) {
               alert('Please load unsafe scripts to proceed.')
-            } 
+            } else {
+              console.log(response.status);
+            }
         });
     }
     // search for movie by imdbID
