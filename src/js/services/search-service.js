@@ -6,7 +6,9 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
             method: 'GET',
             url: "http://www.omdbapi.com/?s=" + searchTerms + "&type=movie"
         }).then(callback, function errorCallback(response) {
-            response.status === -1 ? alert('Please load unsafe scripts to proceed.') : console.log(response);
+            if (response.status === -1) {
+              alert('Please load unsafe scripts to proceed.')
+            } 
         });
     }
     // search for movie by imdbID
