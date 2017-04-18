@@ -9,6 +9,15 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
             console.log(response);
         });
     }
+    // navigate through results
+    changePage = (searchTerms, page) => {
+        $http({
+            method: 'GET',
+            url: "http://www.omdbapi.com/?s=" + searchTerms + "&type=movie" + "&page=" + page
+        }).then(callback, function errorCallback(response) {
+            console.log(response);
+        });
+    }
     // search for movie by imdbID
     findByID = (movieID, callback) => {
         $http({
@@ -51,6 +60,7 @@ angular.module('movieApp').service('SearchService', function($http, $location, $
       getSearchTerms: getSearchTerms,
       setWatchlist: setWatchlist,
       getWatchlist: getWatchlist,
-      findByID: findByID
+      findByID: findByID,
+      changePage: changePage
     };
 });

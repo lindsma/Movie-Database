@@ -12,6 +12,7 @@
         .search-header {
             margin-bottom: 30px;
             text-align: center;
+            width: 100%;
             @include media(tablet) {
                 font-size: 35px;
                 margin-bottom: 0;
